@@ -3,23 +3,41 @@ const Student = require('./studentschema');
 const Admin = require('./adminSchema');
 const mongoc = require('./mongoc');
 
+const express = require('express');
+const app = express();
+const port = 3000;
+
+
 run();
 
 async function run() {
     try {
         // console.log(studentdata);
         // console.log(admindata);
+        app.post('/students', function (req, res) {
 
-        studentdata.map(async (studentdata) => {
+            studentdata.map(async (studentdata) => {
 
-            const student = Student.create(studentdata)
+                const student = Student.create(studentdata).then(function (result) {
+                    res.send(result)
+                });
+
+            });
+
 
         });
 
-        admindata.map(async (admindata) => {
+        app.listen(3000);
 
-            const admin = Admin.create(admindata)
+        app.post('/admins', function (req, res) {
 
+            admindata.map(async (admindata) => {
+
+                const admin = Admin.create(admindata).then(function (result) {
+                    res.send(result)
+                });
+
+            });
         });
 
 
@@ -37,8 +55,6 @@ async function run() {
 }
 
 //console.log(Data);
-
-
 
 
 

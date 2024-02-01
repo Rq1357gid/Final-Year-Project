@@ -7,7 +7,8 @@
     "devStarta": "nodemon servera.js",
     "devStartb": "nodemon script.js",
     "devStartm": "nodemon mongoc.js",
-    "exceltodb": "nodemon handleexcel.js"
+    "exceltodb": "nodemon handleexcel.js",
+    "type":"module"
   },
   "keywords": [],
   "author": "",

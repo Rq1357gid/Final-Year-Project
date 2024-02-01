@@ -1,1 +1,13 @@
-POST http://localhost:3000/excel
+POST http://localhost:3000/students
+
+
+###
+POST http://localhost:3000/admins
+
+
+###
+GET http://localhost:3000/students
+
+
+###
+GET http://localhost:3000/admins
