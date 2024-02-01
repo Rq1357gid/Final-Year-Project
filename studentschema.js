@@ -4,27 +4,29 @@ const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
     Role: {
         type: String,
-        //required: true,
+        required: true,
     },
-    name: {
+    Name: {
         type: String,
-        //required: true,
+        required: true,
     },
     Email: {
         type: String,
-        //required: true,
+        required: true,
         minLength: 8,
         lowercase: true,
-        //unique: true,
+        unique: true,
     },
-    password: {
+    Password: {
         type: String,
-        //required: true,
+        required: true,
     },
-    year: Number,
+    Year: {
+        type: Number,
+    },
     Roll_Number: {
         type: Number,
-        //unique: true,
+        unique: true,
     },
     Data_Structure_and_Algorithm: Number,
     Machine_Learning: Number,

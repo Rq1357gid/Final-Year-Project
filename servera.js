@@ -2,10 +2,6 @@
 const xlsx = require('xlsx');
 const workbook = xlsx.readFile('Book1.xlsx');
 
-// const app = express();
-// const port = 3000;
-
-//app.post('/excel', function (req, res){
 
   const sheetNames = workbook.SheetNames;
 
@@ -26,7 +22,7 @@ let admindata = [];
   admindata.push(jsondatasheetone);
 //}
 
-console.log(studentdata);
+//console.log(studentdata);
 //console.log(admindata);
 
 module.exports = { studentdata, admindata }
