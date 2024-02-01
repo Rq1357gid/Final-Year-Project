@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost/testdb");
 //e => console.log(e);
 
 run();
-
+console.log("done");
 async function run() {  //(console.log(e.error.age) --> this can give specific info about why error occured on age, just for an example.)
 
     try { //const user = await user.findById("65ae4a4050f9ecf0fe310267")
